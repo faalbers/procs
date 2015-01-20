@@ -1,0 +1,10 @@
+Import('baseEnv')
+
+# Windows GCC specific setup
+windowsEnv = baseEnv.Clone()
+
+Export('windowsEnv')
+
+objs = SConscript('windows/SConscript')
+
+Return('objs')

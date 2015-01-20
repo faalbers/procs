@@ -1,0 +1,10 @@
+Import('mainEnv')
+env = mainEnv.Clone()
+
+env.Append(LIBPATH = ['#/gen'])
+env.Append(LIBS = ['processlist'])
+
+prog = env.Program('procs', Glob('*.cpp'))
+
+env.Install(env['DEBUG'], prog)
+

@@ -1,0 +1,7 @@
+Import('linuxEnv')
+env = linuxEnv.Clone()
+
+objs = env.Object(Glob('*.cpp'))
+
+Return('objs')
+

@@ -1,0 +1,9 @@
+Import('baseEnv')
+
+# Main setup
+mainEnv = baseEnv.Clone()
+
+Export('mainEnv')
+
+SConscript('main/SConscript')
+

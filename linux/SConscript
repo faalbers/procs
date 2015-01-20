@@ -1,0 +1,11 @@
+Import('baseEnv')
+
+# Linux GCC specific setup
+linuxEnv = baseEnv.Clone()
+#linuxEnv.Append(CCFLAGS = ' -std=c++98')
+
+Export('linuxEnv')
+
+objs = SConscript('linux/SConscript')
+
+Return('objs')

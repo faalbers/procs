@@ -1,0 +1,7 @@
+Import('osxEnv')
+env = osxEnv.Clone()
+
+objs = env.Object(Glob('*.cpp'))
+
+Return('objs')
+

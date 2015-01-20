@@ -1,0 +1,10 @@
+Import('baseEnv')
+
+# OSX GCC specific setup
+osxEnv = baseEnv.Clone()
+
+Export('osxEnv')
+
+objs = SConscript('osx/SConscript')
+
+Return('objs')

@@ -1,0 +1,7 @@
+Import('windowsEnv')
+env = windowsEnv.Clone()
+
+objs = env.Object(Glob('*.cpp'))
+
+Return('objs')
+
